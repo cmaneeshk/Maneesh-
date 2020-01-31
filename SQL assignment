@@ -1,0 +1,269 @@
+1.SELECT AVG (total_episodes_non_lupa)
+FROM `bigquery-public-data.cms_medicare.home_health_agencies_2013`
+	
+551.4217139757708
+
+2.SELECT AVG (latitude)
+FROM `bigquery-public-data.austin_bikeshare.bikeshare_stations`
+
+	
+30.268465416666665
+
+3.SELECT COUNT(STATE)
+  FROM `bigquery-public-data.cms_medicare.home_health_agencies_2013`
+Row	zipcode	geo_id	         minimum_age	maximum_age	gender	population	
+1	00725      8600000US00725   null               null                                            143987
+2              78572     8600000US78572    null                null                                           114124
+3              60629     8600000US60629    null	null		                113984	
+
+4.SELECT sum (latitude)
+FROM `bigquery-public-data.austin_bikeshare.bikeshare_stations`
+1	2905.7726800000005	
+
+5.SELECT COUNT(STATE)
+  FROM `bigquery-public-data.cms_medicare.home_health_agencies_2013`
+	
+11062
+
+6.select fertility1.country_name,fertility2.crude_birth_rate
+from `bigquery-public-data.census_bureau_international.age_specific_fertility_rates`
+as fertility1
+join `bigquery-public-data.census_bureau_international.birth_death_growth_rates` as fertility2
+ON (fertility1.country_name=fertility2.country_name)
+
+Row	country_name	crude_birth_rate	
+1            Aruba	               18.47
+ 2           Aruba                         18.89
+3	Aruba                       19.25
+4               Aruba                     19.54
+
+7.select * from `bigquery-public-data.census_bureau_usa.population_by_zip_2000`
+ORDER BY population desc
+limit 1000
+Row	zipcode	geo_id	    minimum_age	maximum_age	gender	population	
+1	00725      8600000US007258600000US00725null                        null             143987
+2	78572      8600000US78572                         null                        null            114124
+8.select * from `bigquery-public-data.san_francisco_bikeshare.bikeshare_trips`
+order by `trip_id` asc
+
+Row	trip_id	duration_sec	start_date	start_station_name	start_station_id	end_date	end_station_name	end_station_id	bike_number	zip_code	subscriber_type	c_subscription_type	start_station_latitude	start_station_longitude	end_station_latitude	end_station_longitude	member_birth_year	member_gender	bike_share_for_all_trip	start_station_geom	end_station_geom
+1	
+10002017072015570900
+159
+2017-07-20 15:57:09 UTC
+Shattuck Ave at Telegraph Ave
+158
+2017-07-20 15:59:48 UTC
+49th St at Telegraph Ave
+175
+1000
+null
+Subscriber
+Subscriber
+37.8332786
+-122.2634901
+37.8359455
+-122.2623663
+1977
+Male
+null
+POINT(-122.2634901 37.8332786)
+POINT(-122.2623663 37.8359455)
+2	
+10002017072208442500
+1528
+2017-07-22 08:44:25 UTC
+Telegraph Ave at Ashby Ave
+248
+2017-07-22 09:09:54 UTC
+Franklin St at 9th St
+162
+1000
+null
+Subscriber
+Subscriber
+37.8559558
+-122.2597949
+37.8005161
+-122.2720799
+1960
+Female
+null
+POINT(-122.2597949 37.8559558)
+POINT(-122.2720799 37.8005161)
+3	
+10002017072507154700
+1044
+2017-07-25 07:15:47 UTC
+West St at 40th St
+190
+2017-07-25 07:33:11 UTC
+Franklin St at 9th St
+162
+1000
+null
+Subscriber
+Subscriber
+37.8302232
+-122.2709501
+37.8005161
+-122.2720799
+1979
+Female
+null
+POINT(-122.2709501 37.8302232)
+POINT(-122.2720799 37.8005161)
+4	
+10002017072510060900
+507
+2017-07-25 10:06:09 UTC
+Franklin St at 9th St
+162
+2017-07-25 10:14:36 UTC
+Telegraph Ave at 19th St
+183
+1000
+null
+Customer
+Customer
+37.8005161
+-122.2720799
+37.8087021
+-122.2699271
+1987
+Female
+null
+POINT(-122.2720799 37.8005161)
+POINT(-122.2699271 37.8087021)
+5	
+10002017072521223000
+925
+2017-07-25 21:22:30 UTC
+Grand Ave at Santa Clara Ave
+193
+2017-07-25 21:37:55 UTC
+2nd Ave at E 18th St
+200
+1000
+null
+Customer
+Customer
+37.8127441
+-122.2472152
+37.800213566969795
+-122.25381016731262
+null
+null
+null
+POINT(-122.2472152 37.8127441)
+POINT(-122.253810167313 37.8002135669698)
+6	
+10002017072607555700
+398
+2017-07-26 07:55:57 UTC
+2nd Ave at E 18th St
+200
+2017-07-26 08:02:35 UTC
+10th St at Fallon St
+201
+1000
+null
+Subscriber
+Subscriber
+37.800213566969795
+-122.25381016731262
+37.7976728
+-122.2629973
+1987
+Male
+null
+POINT(-122.253810167313 37.8002135669698)
+POINT(-122.2629973 37.7976728)
+7	
+10002017073012594800
+1257
+2017-07-30 12:59:48 UTC
+12th St at 4th Ave
+233
+2017-07-30 13:20:46 UTC
+10th St at Fallon St
+201
+1000
+null
+Customer
+Customer
+37.7958125
+-122.2555549
+37.7976728
+-122.2629973
+1995
+Female
+null
+POINT(-122.2555549 37.7958125)
+POINT(-122.2629973 37.7976728)
+8	
+10002017073119024400
+776
+2017-07-31 19:02:44 UTC
+10th St at Fallon St
+201
+2017-07-31 19:15:41 UTC
+Lakeshore Ave at Trestle Glen Rd
+194
+1000
+null
+Subscriber
+Subscriber
+37.7976728
+-122.2629973
+37.8110807
+-122.2432677
+1952
+Male
+null
+POINT(-122.2629973 37.7976728)
+POINT(-122.2432677 37.8110807)
+
+8.SELECT * FROM `bigquery-public-data.cms_medicare.home_health_agencies_2013` LIMIT 1000
+
+Row	provider_id	agency_name	street_address	city	state	zip_code	total_episodes_non_lupa	distinct_users_non_lupa	total_hha_charge_amount_non_lupa	total_hha_medicare_payment_amount_non_lupa	total_hha_medicare_standard_payment_amount_non_lupa	outlier_payments_as_a_percent_of_medicare_payment_amount_non_lupa	total_lupa_episodes	total_hha_medicare_payment_amount_for_lupas
+1	337290	AMERICARE CERTIFIED SPECIAL SERVICES, INC CHHA	5923 STRICKLAND AVENUE	BROOKLYN	NY	11234	3148	2310	14112445	12667998	9482140	10	259	108050
+2	58217	BRADBOURNE HEALTHCARE, INC	16029 ARROW HIGHWAY SUITE A	IRWINDALE	CA	91706	620	297	1786721	2257118	1768714	10	null	null
+3	58419	INSIGHT HEALTH CARE PROVIDERS, INC	500 S KRAEMER BLVD, #240	BREA	CA	92821	19	15	127300	87592	68536	11	null	null
+4	108167	D & N HOME HEALTH SERVICES, INC.	1140 W 50 ST STE 305	HIALEAH	FL	33012	208	63	1399981	985102	894280	10	null	null
+
+9. select fertility1.country_name,fertility2.crude_birth_rate
+from `bigquery-public-data.census_bureau_international.age_specific_fertility_rates`
+as fertility1
+join `bigquery-public-data.census_bureau_international.birth_death_growth_rates` as fertility2
+ON (fertility1.country_name=fertility2.country_name)
+
+Row	country_name	crude_birth_rate
+1	Aruba	18.47
+2	Aruba	18.89
+3	Aruba	19.25
+4	Aruba	19.54
+5	Aruba	19.7
+6	Aruba	19.75
+7	Aruba	19.74
+8	Aruba	19.66
+9	Aruba	19.54
+10	Aruba	19.39
+11	Aruba	19.29
+12	Aruba	18.6
+13	Aruba	18.05
+14	Aruba	16.89
+
+10.SELECT * FROM `bigquery-public-data.cms_medicare.home_health_agencies_2013` 
+oRDER BY CITY
+Row	provider_id	agency_name	street_address	city	state	zip_code	total_episodes_non_lupa	distinct_users_non_lupa	total_hha_charge_amount_non_lupa	total_hha_medicare_payment_amount_non_lupa	total_hha_medicare_standard_payment_amount_non_lupa	outlier_payments_as_a_percent_of_medicare_payment_amount_non_lupa	total_lupa_episodes	total_hha_medicare_payment_amount_for_lupas
+1	427076	HEALTH RELATED HOME CARE	104 W PICKENS STREET	ABBEVILLE	SC	29620	2024	912	6568301	5247130	5846351	0	169	53571
+2	197769	MD HOMECARE NETWORK	2018 VETERANS MEMORIAL DRIVE	ABBEVILLE	LA	70510	1076	462	2019966	2658078	3174082	0	32	8789
+3	437024	AVERA ST LUKES HOME HEALTH	305 S STATE ST POST OFFICE BOX 4450	ABERDEEN	SD	57401	363	284	967447	813882	942321	0	36	12083
+4	457564	ABILENE HOME HEALTH PROFESSIONAL CARE INC	265 SOUTH LEGGETT DRIVE SUITE 1	ABILENE	TX	79605	140	97	446128	457476	527727	0	null	null
+5	747518	BEYONDFAITH HOMECARE & REHAB OF ABILENE LLC	238 SAYLES BLVD	ABILENE	TX	79602	302	114	896989	731344	851010	0	null	null
+
+
+
+
+
